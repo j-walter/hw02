@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Task 2</title>
+<script>
+function createElement(elementName, innerText = null) {
+	element = document.createElement(elementName);
+	if (innerText != null) {
+		element.innerText = innerText;
+	}
+	return element;
+}
+function getNumber() {
+	return document.getElementById('number');
+}
+function showNumber(post) {
+	alert(getNumber().innerText);
+}
+function incrementNumber() {
+	(getNumber().innerText)++;
+}
+function appendNumber() {
+	document.body.appendChild(createElement('P', innerText=getNumber().innerText))
+}
+</script>
+</head>
+<body>
+<h2 id="number">10</h2>
+<button type="button" onclick="showNumber()">Current Value</button>
+<button type="button" onclick="incrementNumber()">Increment</button>
+<button type="button" onclick="appendNumber()">Append</button>
+</body>
+</html>

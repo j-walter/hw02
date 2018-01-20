@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Task 3</title>
+<script>
+function switchView(item) {
+	var links = document.querySelectorAll("main div div ul li a");
+	for (i = 0; i < links.length; i++) {
+		var textBlock = document.getElementById(links[i].innerText.replace(" ", "-"));
+		if (item === links[i]) {
+			textBlock.className = "";
+		} else {
+			textBlock.className = "hidden";
+		}
+	}
+}
+</script>
+<style>
+html, body {
+	height:100%;
+}
+body {
+	margin:0;
+}
+main {
+	position: -ms-device-fixed;
+	margin:0 auto;
+	padding:0;
+	position:relative;
+	max-width:1000px;
+	text-align:center;
+}
+.column {
+	float:left;
+}
+.column > * {
+	text-align:left;
+	min-width:75%;
+	padding:0 10px;
+}
+.column-66_6 {
+	width:66.6%;
+}
+.column-33_3 {
+	width:33.3%;
+}
+ul {
+	list-style-type: none;
+}
+ul li {
+	padding:10px;
+}
+.hidden {
+	display:none;
+}
+a, a:active, a:visited {
+	color:#0077EE;
+}
+</style>
+</head>
+<body>
+
+<main>
+
+<h2>HW02 Task Three</h2>
+<div>
+	<div class="column column-33_3 center">
+		<ul>
+			<li><a href="#" onclick="switchView(this)">Lorem Ipsem</a></li>
+			<li><a href="#" onclick="switchView(this)">99 Bottles</a></li>
+			<li><a href="#" onclick="switchView(this)">Last Thing</a></li>
+		</ul>
+	</div>
+	<div class="column column-66_6">
+		<div id="Lorem-Ipsem">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper venenatis justo, placerat dignissim orci posuere at. Suspendisse ut hendrerit sem, quis imperdiet leo. Suspendisse facilisis placerat dui. Duis hendrerit leo sollicitudin, porta nunc cursus, ornare felis. Vivamus finibus rutrum velit, vel ornare tellus. Vestibulum pellentesque imperdiet sagittis. Aenean sed enim nisl. Sed nec vehicula nisi, nec dictum massa. Curabitur in molestie ligula, non molestie velit.</p>
+			<p>Pellentesque egestas odio in tempor tempor. Mauris venenatis pharetra eros. Donec sit amet mi elementum, imperdiet orci id, facilisis erat. Integer accumsan neque tortor, vitae luctus quam molestie vel. Quisque mollis sed eros id dignissim. Nullam vehicula metus dui, eget volutpat purus sagittis sed. Aenean imperdiet pretium leo, ut sagittis mauris sollicitudin nec. Donec vestibulum aliquet ultrices. Morbi auctor et magna faucibus condimentum. Vivamus non ornare orci, quis sollicitudin dui.</p>
+			<p>In libero arcu, ullamcorper sit amet dolor ac, condimentum ultrices mi. Duis maximus scelerisque sodales. Quisque convallis nisl ac varius laoreet. Donec congue semper dui, ut tempus diam luctus eget. Morbi ultrices feugiat quam dictum gravida. Sed fermentum vulputate nibh quis egestas. Praesent vel turpis nec ex pulvinar tempor quis vitae risus. Proin vulputate eros eu lacus maximus suscipit. Donec consequat metus eget sem consectetur, ut bibendum quam pharetra. Integer urna lorem, tempus sit amet turpis eu, posuere ultricies tellus. Fusce scelerisque dictum tellus non varius. Duis semper placerat enim ut porttitor. Donec quis sapien eget magna iaculis varius.</p>
+			<p>Fusce fermentum leo sit amet sem varius tristique. In vulputate magna felis, ut blandit enim elementum gravida. Integer egestas lorem eget est pellentesque aliquam. Maecenas tellus metus, auctor fermentum nisl in, vulputate venenatis nibh. Nullam non erat aliquam leo pulvinar fringilla id vitae tortor. Aenean vel magna blandit, tempus nisl sit amet, convallis arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi eget mi non nibh sodales tristique. In in elit in lectus ultricies aliquam in in nisi. Nullam odio dui, euismod sit amet iaculis ut, consequat nec ipsum. Vivamus bibendum laoreet massa. Vivamus non justo leo. Donec euismod orci ut aliquam gravida. Maecenas congue sapien nec ligula molestie iaculis. Integer ullamcorper, enim vitae feugiat pellentesque, neque lacus egestas urna, elementum varius ante felis non lacus.</p>
+		</div>
+		<div id="99-Bottles" class="hidden">
+			<p>99 bottles of beer on the wall, 99 bottles of beer. Take one down and pass it around, 98 bottles of beer on the wall.</p>
+			<p>98 bottles of beer on the wall, 98 bottles of beer. Take one down and pass it around, 97 bottles of beer on the wall.</p>
+			<p>97 bottles of beer on the wall, 97 bottles of beer. Take one down and pass it around, 96 bottles of beer on the wall.</p>
+			<p>96 bottles of beer on the wall, 96 bottles of beer. Take one down and pass it around, 95 bottles of beer on the wall.</p>
+		</div>
+		<div id="Last-Thing" class="hidden">
+			<p>this is the third thing</p>
+		</div>
+	</div>
+</div>
+
+</main>
+</body>
+</html>
